@@ -90,11 +90,11 @@ Allure-отчет включает в себя:
 * видео выполнения автотеста.
 
 <p align="center">
-<img title="Allure Overview" src="images/screenshots/allere_report.png">
+<img title="Allure Overview" src="images/screenshots/jenkinsbrowser.png">
 </p>
 
 <p align="center">
-<img title="Test Results in Alure" src="images/screenshots/allure_steps.png">
+<img title="Test Results in Alure" src="images/screenshots/jenkinstask.png">
 </p>
 
 
