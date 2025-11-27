@@ -1,12 +1,13 @@
+
+
 {
   "base": {
-    "project": "demoqa",
-    "environment": "kimo.com",
+    "project": "some project",
+    "environment": "some env",
     "comment": "some comment",
-    "reportLink": "",
-    "language": "en",
-    "messenger": "telegram",
-    "allureFolder": "build/allure-results",
+    "reportLink": "build/reports/allure-report/allureReport",
+    "language": "ru",
+    "allureFolder": "build/reports/allure-report/allureReport",
     "enableChart": true
   },
   "telegram": {
