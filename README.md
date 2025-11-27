@@ -12,7 +12,14 @@
 ## :open_book: Описание
 В проекте реализованы UI тесты для формы регистрации https://demoqa.com/automation-practice-form
 
+- PracticeFormTests.java: Базовый тест с открытыми селекторами, без наследования
+- PracticeFormTestsPOM.java: Применен Page Object Model и наследование от `TestBase`
+- PracticeFormTestsPOMJavaFaker.java:  Добавлен JavaFaker для генерации тестовых данных
+
 <img width="100%" style="vertical-align:middle" title="demoqa.com/automation-practice-form" src="images/screenshots/2025-11-25_11-09-51.png">
+
+
+
 
 ## :computer: Использованный стек технологий
 
@@ -35,14 +42,33 @@
 
 ## :running_woman: Запуск тестов
 
-### Запуск из терминала
+### Запуск из терминала (PowerShell)
 ```
-./gradlew demoqa_test
+./gradlew demoqa_test 
 ```
+```
+./gradlew demoqa_test "-DbrowserSize=1900x1080" 
+```
+```
+.\gradlew demoqa_test "-Dbrowser=firefox" "-DbrowserSize=1900x1080" "-DbaseUrl=https://demoqa.com"
+```
+Если значения не пререданы, будут использоваться дефолтные ("chrome", "1920x1080","https://demoqa.com")
 
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Сборка в Jenkins
+demoqa_test - будут запущены тесты с тегом  @Tag("demoqa"), для запуска всех тестов использовать test.
+Запускать PracticeFormTests.java не требуется, поэтому используем demoqa_test
+
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Сборка в Jenkins (Katkimo_demoqa_system)
 
 **Configure:**
+- **Используй параметризованную сборку:**
+  <p align="center">
+<img title="Allure Overview" src="images/screenshots/allere_report.png">
+</p>
+
+ <p align="center">
+<img title="Allure Overview" src="images/screenshots/allere_report.png">
+</p>
+
 - **Repository:** `https://github.com/EkaterinaMelnikova/demoqa.com_jenkins1` *(SCM > Git)*
 - **Branch:** `*/main` *(SCM > Branches to build)*
 - **Gradle Version:** `Gradle 8.12` *(Build Steps > Invoke Gradle)*
