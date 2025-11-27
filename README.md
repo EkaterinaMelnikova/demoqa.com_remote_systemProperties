@@ -57,9 +57,18 @@
 demoqa_test - будут запущены тесты с тегом  @Tag("demoqa"), для запуска всех тестов использовать test.
 Запускать PracticeFormTests.java не требуется, поэтому используем demoqa_test
 
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Сборка в Jenkins
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Сборка в Jenkins (Katkimo_demoqa_system)
 
 **Configure:**
+- **Используй параметризованную сборку:**
+  <p align="center">
+<img title="Allure Overview" src="images/screenshots/allere_report.png">
+</p>
+
+ <p align="center">
+<img title="Allure Overview" src="images/screenshots/allere_report.png">
+</p>
+
 - **Repository:** `https://github.com/EkaterinaMelnikova/demoqa.com_jenkins1` *(SCM > Git)*
 - **Branch:** `*/main` *(SCM > Branches to build)*
 - **Gradle Version:** `Gradle 8.12` *(Build Steps > Invoke Gradle)*
