@@ -62,17 +62,17 @@ demoqa_test - будут запущены тесты с тегом  @Tag("demoqa
 **Configure:**
 - **Используй параметризованную сборку:**
   <p align="center">
-<img title="Allure Overview" src="images/screenshots/allere_report.png">
+<img title="Allure Overview" src="images/screenshots/jenkinsbrowser.png">
 </p>
 
  <p align="center">
-<img title="Allure Overview" src="images/screenshots/allere_report.png">
+<img title="Allure Overview" src="images/screenshots/jenkinstask.png">
 </p>
 
-- **Repository:** `https://github.com/EkaterinaMelnikova/demoqa.com_jenkins1` *(SCM > Git)*
+- **Repository:** `https://github.com/EkaterinaMelnikova/demoqa.com_remote_systemProperties.git` *(SCM > Git)*
 - **Branch:** `*/main` *(SCM > Branches to build)*
 - **Gradle Version:** `Gradle 8.12` *(Build Steps > Invoke Gradle)*
-- **Command:** `clean demoqa_test` *(Build Steps > Tasks)*
+- **Command:** `clean ${TASK} -Dbrowser=${BROWSER}` *(Build Steps > Tasks), так же можно добавить в параметры сборки browserSize и remoteUrl *
 - **Allure Path:** `build/allure-results/` *(Allure Report)*
 
 
@@ -90,11 +90,11 @@ Allure-отчет включает в себя:
 * видео выполнения автотеста.
 
 <p align="center">
-<img title="Allure Overview" src="images/screenshots/jenkinsbrowser.png">
+<img title="Allure Overview" src="images/screenshots/allere_report.png">
 </p>
 
 <p align="center">
-<img title="Test Results in Alure" src="images/screenshots/jenkinstask.png">
+<img title="Test Results in Alure" src="images/screenshots/allure_steps.png">
 </p>
 
 
