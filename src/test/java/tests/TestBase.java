@@ -19,14 +19,16 @@ public class TestBase {
     TestData testData = new TestData();
     PracticeFormPage practiceFormPage= new PracticeFormPage();
 
+    @Tag("demoqa")
     @BeforeAll
     static void beforeAll() {
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-        //Configuration.browser = "chrome";
-        //Configuration.timeout = 10000;
-        //        Configuration.holdBrowserOpen = true;
+        Configuration.browser = System.getProperty("browser","chrome");
+        Configuration.browserSize = System.getProperty("browserSize","1920x1080");
+        Configuration.baseUrl = System.getProperty("baseUrl","https://demoqa.com");
+        //Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.remote = System.getProperty("remoteUrl");
+        Configuration.timeout = 10000;
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -34,16 +36,20 @@ public class TestBase {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
+
+        System.out.println("Browser: " + Configuration.browser);
+        System.out.println("BrowserSize: " + Configuration.browserSize);
+        System.out.println("Remote: " + Configuration.remote);
     }
 
 
-
+    @Tag("demoqa")
     @BeforeEach
     void addListener(){
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
-
+    @Tag("demoqa")
     @AfterEach
     void addAttachments() {
         com.kimo.helpers.Attach.screenshotAs("Last screenshot");

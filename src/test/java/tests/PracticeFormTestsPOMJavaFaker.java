@@ -1,17 +1,15 @@
 package tests;
 
-import com.github.javafaker.Faker;
+
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.PracticeFormPage;
-
-import java.util.Locale;
 
 
-@Tag("demoqa")
+
+
 public class PracticeFormTestsPOMJavaFaker extends TestBase {
 
-
+    @Tag("demoqa")
     @Test
     void fillPracticeFormTest() {
 

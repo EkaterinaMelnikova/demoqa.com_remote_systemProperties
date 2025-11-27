@@ -13,12 +13,12 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
-@Tag("demoqa")
+
 public class PracticeFormTestsPOM extends TestBase {
 
     PracticeFormPage practiceFormPage= new PracticeFormPage();
 
-
+    @Tag("demoqa")
     @Test
     void fillPracticeFormTest() {
 

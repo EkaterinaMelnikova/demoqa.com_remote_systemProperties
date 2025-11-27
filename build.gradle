@@ -44,10 +44,31 @@ tasks.register('demoqa_test', Test) {
 }
 
 tasks.withType(Test) {
-    systemProperty "file.encoding", "UTF-8"
-    systemProperty "sun.jnu.encoding", "UTF-8"
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
 }
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
+
+tasks.register('one_property_test', Test) {
+    useJUnitPlatform {
+        includeTags("one_property")
+    }
+}
+
+
+
+
+
+
+
+
