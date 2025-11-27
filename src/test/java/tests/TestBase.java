@@ -19,7 +19,7 @@ public class TestBase {
     TestData testData = new TestData();
     PracticeFormPage practiceFormPage= new PracticeFormPage();
 
-    @Tag("demoqa")
+
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = System.getProperty("browser","chrome");
@@ -43,13 +43,13 @@ public class TestBase {
     }
 
 
-    @Tag("demoqa")
+
     @BeforeEach
     void addListener(){
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
-    @Tag("demoqa")
+
     @AfterEach
     void addAttachments() {
         com.kimo.helpers.Attach.screenshotAs("Last screenshot");

@@ -59,11 +59,6 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-tasks.register('one_property_test', Test) {
-    useJUnitPlatform {
-        includeTags("one_property")
-    }
-}
 
 
 
