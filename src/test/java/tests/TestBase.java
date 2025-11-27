@@ -26,7 +26,7 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("browserSize","1920x1080");
         Configuration.baseUrl = System.getProperty("baseUrl","https://demoqa.com");
         //Configuration.browserVersion = System.getProperty("browserVersion");
-        Configuration.remote = System.getProperty("remoteUrl");
+        Configuration.remote = System.getProperty("remoteUrl","https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.timeout = 10000;
 
 
