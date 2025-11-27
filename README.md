@@ -54,6 +54,9 @@
 ```
 Если значения не пререданы, будут использоваться дефолтные ("chrome", "1920x1080","https://demoqa.com")
 
+demoqa_test - будут запущены тесты с тегом  @Tag("demoqa"), для запуска всех тестов использовать test.
+Запускать PracticeFormTests.java не требуется, поэтому используем demoqa_test
+
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Сборка в Jenkins
 
 **Configure:**
