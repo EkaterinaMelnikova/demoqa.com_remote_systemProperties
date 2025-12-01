@@ -2,9 +2,9 @@
 
 {
   "base": {
-    "project": "some project",
-    "environment": "some env",
-    "comment": "some comment",
+    "project": "demoqa project",
+    "environment": "test env",
+    "comment": "demoqa_tests",
     "reportLink": "build/reports/allure-report/allureReport",
     "language": "ru",
     "allureFolder": "build/reports/allure-report/allureReport",
