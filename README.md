@@ -97,4 +97,16 @@ Allure-отчет включает в себя:
 <img title="Test Results in Alure" src="images/screenshots/allure_steps.png">
 </p>
 
+### Уведомление о прохождении тестов в Telegram
+
+Отправление через PowerShell:
+* java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.11.0.jar
+
+Отправление через Jenkins:
+* //TODO)
+
+<p align="center">
+<img title="Telegram" src="images/screenshots/telegram.png">
+</p>
+
 
